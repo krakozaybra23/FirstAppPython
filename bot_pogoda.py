@@ -12,11 +12,8 @@ def send_welcome(message):
     temp = w.temperature('celsius')['temp']
     answer = 'В городе' + ' ' + str(message.text) + ' ' + 'температура' + ' ' + str(temp)
 
-    answer_two = 'проверьте правильность ввода города'
 
     bot.send_message(message.chat.id, answer)
-else:
-    bot.send_message(message.chat.id, answer_two)
 
 
 bot.polling(none_stop = True)
